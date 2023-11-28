@@ -1,0 +1,70 @@
+<!-- office add-in -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Mdb" title="Mdb" />
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none1;">
+        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
+        <!-- <ul class="ms-List ms-welcome__features">
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+                <span class="ms-font-m">Achieve more with Office integration</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
+                <span class="ms-font-m">Unlock features and functionality</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
+                <span class="ms-font-m">Create and visualize like a pro</span>
+            </li>
+        </ul> -->
+        <p class="ms-font-l" id="lablerun" hidden="true">尝试点击 <b>按钮</b> 以便执行自定义工具.</p>
+        <p class="ms-font-l" id="lablemsg"><b>没有可供执行的自定义工具。</b></p>
+        <div role="button" class="ms-font-xl">
+            <fluent-tooltip id="tooltip" anchor="splitCell">
+                按照分类标题创建表格并写入数据
+            </fluent-tooltip>
+            <fluent-button appearance="accent" id="splitCell" aria-describedby="tooltip" disabled="true" hidden="true">
+                自动分类
+            </fluent-button>
+        </div>
+        <div role="button" class="ms-font-xl">
+            <fluent-button appearance="accent" id="sharefolder" disabled="true" hidden="true">ShareFolder Link
+            </fluent-button>
+        </div>
+        <div style="margin-top: 10px;">
+            <fluent-switch>
+                <span slot="checked-message">On</span>
+                <span slot="unchecked-message">Off</span>
+                <label for="cap-switch">自动刷新:</label>
+            </fluent-switch>
+        </div>
+    </main>
+</body>
+
+</html>
