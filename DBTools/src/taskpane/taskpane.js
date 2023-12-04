@@ -120,27 +120,27 @@ export async function shareFolder() {
             folderNameRoot = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\`;
             break;
-          case "一级目录":
+          case "一级":
             folderNameOne = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\`;
             break;
-          case "二级目录":
+          case "二级":
             folderNameTwo = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\${folderNameTwo}\\`;
             break;
-          case "三级目录":
+          case "三级":
             folderNameThree = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\${folderNameTwo}\\${folderNameThree}\\`;
             break;
-          case "四级目录":
+          case "四级":
             folderNameFour = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\${folderNameTwo}\\${folderNameThree}\\${folderNameFour}\\`;
             break;
-          case "五级目录":
+          case "五级":
             folderNameFive = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\${folderNameTwo}\\${folderNameThree}\\${folderNameFour}\\${folderNameFive}\\`;
             break;
-          case "六级目录":
+          case "六级":
             folderNameSix = newFolderName;
             shareFolderLink = `\\\\XXXX.XXX.XXX.XXX\\共享平台\\${folderNameRoot}\\${folderNameOne}\\${folderNameTwo}\\${folderNameThree}\\${folderNameFour}\\${folderNameFive}\\${folderNameSix}\\`;
             break;
